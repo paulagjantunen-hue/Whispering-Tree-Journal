@@ -40,14 +40,8 @@ const closings = [
   "waiting for someone to listen back."
 ];
 
-function rand(arr) {
-  return arr[Math.floor(Math.random() * arr.length)];
-}
+const rand = arr => arr[Math.floor(Math.random() * arr.length)];
 
 export function generatePoem(mood) {
-  const open = rand(openings);
-  const img = rand(imagery[mood] || imagery["balanced stillness"]);
-  const close = rand(closings);
-
-  return `${open} ${img} ${close}`;
+  return `${rand(openings)} ${rand(imagery[mood])} ${rand(closings)}`;
 }

@@ -1,0 +1,25 @@
+body {
+  font-family: Georgia, serif;
+  background: #0b0f0c;
+  color: #d7f5dd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  max-width: 600px;
+  text-align: center;
+}
+
+h1 {
+  font-weight: normal;
+}
+
+#entry {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}

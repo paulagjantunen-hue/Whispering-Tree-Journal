@@ -1,25 +1,98 @@
 body {
-  font-family: Georgia, serif;
-  background: #0b0f0c;
+  margin: 0;
+  overflow: hidden;
+  background: #0b1020;
   color: #d7f5dd;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-family: Georgia, serif;
   height: 100vh;
 }
 
-.container {
-  max-width: 600px;
-  text-align: center;
+.sky {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at top, #1e2d44, #0b1020 70%);
+  transition: 2s;
 }
 
-h1 {
-  font-weight: normal;
+.container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#tree {
+  width: 300px;
+  overflow: visible;
+}
+
+.trunk {
+  fill: #4a3425;
+}
+
+.leaves {
+  fill: #3f8f55;
+  transition: fill 2s, transform 2s;
+}
+
+#branches {
+  transform-origin: center bottom;
+}
+
+#journal {
+  margin-top: 2rem;
+  text-align: center;
+  max-width: 500px;
+  padding: 1rem;
 }
 
 #entry {
-  margin-top: 2rem;
-  font-size: 1.2rem;
+  margin-top: 1rem;
   line-height: 1.6;
-  opacity: 0.9;
+  font-size: 1.1rem;
+}
+
+.rain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.drop {
+  position: absolute;
+  width: 2px;
+  height: 20px;
+  background: rgba(180,220,255,0.5);
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(110vh);
+  }
+}
+
+.windy {
+  animation: sway 3s ease-in-out infinite alternate;
+}
+
+@keyframes sway {
+  from {
+    transform: rotate(-3deg);
+  }
+  to {
+    transform: rotate(3deg);
+  }
+}
+
+.glow {
+  filter: drop-shadow(0 0 15px rgba(255,220,120,0.5));
 }

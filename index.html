@@ -1,16 +1,34 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Whispering Tree Journal</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>🌳 Whispering Tree Journal</h1>
-    <div id="entry">Loading...</div>
-  </div>
 
-  <script type="module" src="./main.js"></script>
+<div class="sky"></div>
+<div class="rain" id="rain"></div>
+
+<div class="container">
+  <svg id="tree" viewBox="0 0 300 400">
+    
+    <rect x="135" y="180" width="30" height="140" class="trunk"/>
+
+    <g id="branches">
+      <circle cx="150" cy="120" r="70" class="leaves"/>
+      <circle cx="100" cy="160" r="50" class="leaves"/>
+    </g>
+  </svg>
+
+  <div id="journal">
+    <h1>Whispering Tree Journal</h1>
+    <div id="entry">Listening to the weather...</div>
+  </div>
+</div>
+
+<script src="main.js"></script>
+
 </body>
 </html>
